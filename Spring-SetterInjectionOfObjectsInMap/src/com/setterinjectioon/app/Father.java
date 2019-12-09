@@ -7,10 +7,8 @@ import java.util.Set;
 
 public class Father {
 
-	private String name;
-	private List<Son> sons;
-	
-	
+	private String name;	
+	Map<String , Son> sons = new HashMap();
 
 	public String getName() {
 		return name;
@@ -20,17 +18,18 @@ public class Father {
 		this.name = name;
 	}
 
-	public List<Son> getSons() {
-		return sons;
-	}
-
-	public void setSons(List<Son> sons) {
-		this.sons = sons;
-	}
 
 	@Override
 	public String toString() {
 		return "Father [name=" + name + ", sons=" + sons + "]";
+	}
+
+	public Map<String, Son> getSons() {
+		return sons;
+	}
+
+	public void setSons(Map<String, Son> sons) {
+		this.sons = sons;
 	}
 
 }
